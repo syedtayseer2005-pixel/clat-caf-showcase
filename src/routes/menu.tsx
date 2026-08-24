@@ -4,8 +4,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { menu, type MenuSection } from "@/data/menu";
 import { site } from "@/data/site";
-import coffee from "@/assets/eclat-coffee.jpg.asset.json";
-import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
 
 const title = "Menu — Éclat Café, Ascot Vale";
 const description =
@@ -27,12 +25,8 @@ export const Route = createFileRoute("/menu")({
 
 const sectionImages: Record<string, { url: string; alt: string }> = {
   coffee: {
-    url: coffee.url,
-    alt: "Two lattes with poured art on black saucers at Éclat Café",
-  },
-  smoothies: {
-    url: smoothie.url,
-    alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
+    url: "/images/eclat-coffee.png",
+    alt: "Fries, toast and a burger from Éclat's all-day menu",
   },
 };
 
