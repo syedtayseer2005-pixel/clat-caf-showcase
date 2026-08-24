@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/data/site";
-import shopfront from "@/assets/eclat-shopfront.jpg.asset.json";
+import windowSeats from "@/assets/eclat-window.jpg.asset.json";
 
 const title = "Contact & Hours — Éclat Café, Ascot Vale";
 const description =
@@ -142,14 +142,14 @@ function ContactPage() {
             <Reveal delay={160} as="figure">
               <div className="overflow-hidden">
                 <img
-                  src={shopfront.url}
-                  alt="Éclat Café shopfront on Union Road, Ascot Vale, with a tram passing"
+                  src={windowSeats.url}
+                  alt="Window bench seating inside Éclat Café looking out onto Union Road, Ascot Vale"
                   loading="lazy"
-                  className="aspect-[16/10] w-full object-cover"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
                 />
               </div>
               <figcaption className="mt-2.5 text-[0.74rem] text-muted-foreground">
-                Look for the ÉCLAT signage — tram stop and street parking on Union Road.
+                Window seats look straight onto Union Road — tram stop and street parking outside.
               </figcaption>
             </Reveal>
           </div>
