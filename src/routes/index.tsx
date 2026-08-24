@@ -58,7 +58,7 @@ function Home() {
                 >
                   View menu
                 </Link>
-                
+                <a
                   href={site.orderUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -66,7 +66,7 @@ function Home() {
                 >
                   Order online
                 </a>
-                
+                <a
                   href={site.phoneHref}
                   className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                 >
@@ -150,7 +150,7 @@ function Home() {
           <Reveal delay={120}>
             <p className="mt-6 text-[0.68rem] text-muted-foreground">
               Photography from our own{" "}
-              
+              <a
                 href={site.instagram}
                 target="_blank"
                 rel="noreferrer"
