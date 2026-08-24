@@ -206,7 +206,7 @@ function Home() {
                 {site.hoursNote}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                
+                <a
                   href={site.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
