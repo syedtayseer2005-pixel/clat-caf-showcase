@@ -28,7 +28,7 @@ export const Route = createFileRoute("/menu")({
   component: MenuPage,
 });
 
-const sectionImages: Record<string, { url: string; alt: string }> = {
+
 // Only genres we hold genuine, matching photography for. Categories without a
 // real source photo intentionally stay text-only rather than borrow an image.
 const sectionImages: Record<string, { url: string; alt: string; ratio: string }> = {
