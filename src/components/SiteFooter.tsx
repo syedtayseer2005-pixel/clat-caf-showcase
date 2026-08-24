@@ -40,7 +40,7 @@ export function SiteFooter() {
               </div>
             ))}
           </dl>
-          
+          <a
             href={site.instagram}
             target="_blank"
             rel="noreferrer"
