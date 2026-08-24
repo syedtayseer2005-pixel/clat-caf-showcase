@@ -22,7 +22,7 @@ export function SiteFooter() {
               <div key={line}>{line}</div>
             ))}
           </address>
-          
+          <a
             href={site.phoneHref}
             className="mt-3 inline-block text-sm transition-colors duration-300 hover:text-accent"
           >
