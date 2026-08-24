@@ -50,7 +50,7 @@ function Home() {
               height={221}
             />
           </Reveal>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-end">
+          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
             <Reveal delay={170}>
               <h1 className="max-w-md text-2xl leading-[1.25] text-balance sm:text-3xl">
                 An all-day café on Union Road — espresso, house-made plates and an unhurried room.
