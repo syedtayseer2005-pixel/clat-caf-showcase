@@ -30,12 +30,26 @@ function ReviewsPage() {
 
       <main className="mx-auto w-full max-w-5xl px-5 sm:px-8">
         <header className="pt-14 pb-12 sm:pt-20">
-          <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
-              Guest feedback
-            </p>
-            <h1 className="mt-5 font-display text-3xl sm:text-4xl">Reviews</h1>
-          </Reveal>
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-center">
+            <Reveal>
+              <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+                Guest feedback
+              </p>
+              <h1 className="mt-5 font-display text-3xl sm:text-4xl">Reviews</h1>
+            </Reveal>
+
+            <Reveal delay={100} as="figure">
+              <div className="overflow-hidden">
+                <img
+                  src="/images/eclat-portrait.png"
+                  alt="A guest with coffee outside on Union Road"
+                  loading="eager"
+                  className="aspect-[3/4] w-full max-w-xs object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+
           <Reveal delay={110}>
             <div className="mt-9 flex flex-wrap items-end gap-x-10 gap-y-6 border-t border-border pt-7">
               <div>
@@ -86,7 +100,7 @@ function ReviewsPage() {
 
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border/70 py-12">
-            <a
+            
               href={site.mapsUrl}
               target="_blank"
               rel="noreferrer"
