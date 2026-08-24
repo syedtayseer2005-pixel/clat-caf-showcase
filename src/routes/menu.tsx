@@ -168,10 +168,14 @@ function MenuPage() {
                           src={image.url}
                           alt={image.alt}
                           loading="lazy"
-                          className="aspect-[4/5] w-full object-cover"
+                          className={`w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04] ${image.ratio}`}
                         />
                       </div>
+                      <figcaption className="mt-3 text-[0.74rem] text-muted-foreground">
+                        {section.title} at Éclat — our own photograph.
+                      </figcaption>
                     </Reveal>
+
                   </div>
                 ) : section.layout === "detailed" ? (
                   <DetailedSection section={section} />
