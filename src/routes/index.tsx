@@ -35,9 +35,9 @@ function Home() {
 
       <main>
         {/* Hero */}
-        <section className="mx-auto w-full max-w-6xl px-5 pt-14 pb-16 sm:px-8 sm:pt-20">
+        <section className="mx-auto w-full max-w-5xl px-5 pt-16 pb-16 text-center sm:px-8 sm:pt-24">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
               Ascot Vale · Melbourne
             </p>
           </Reveal>
@@ -45,59 +45,60 @@ function Home() {
             <img
               src={logo.url}
               alt="Éclat Café"
-              className="mt-6 h-8 w-auto sm:h-12 lg:h-14"
+              className="mx-auto mt-8 h-10 w-auto sm:mt-10 sm:h-16 lg:h-20"
               width={900}
               height={221}
             />
           </Reveal>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
-            <Reveal delay={170}>
-              <h1 className="max-w-md text-2xl leading-[1.25] text-balance sm:text-3xl">
-                An all-day café on Union Road — espresso, house-made plates and an unhurried room.
-              </h1>
-              <p className="mt-5 max-w-md text-sm text-muted-foreground">
-                Breakfast from open, lunch through to close, and coffee in between. Sit street-side
-                and watch the tram roll past, or take it with you.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Link
-                  to="/menu"
-                  className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
-                >
-                  View menu
-                </Link>
-                <a
-                  href={site.orderUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
-                >
-                  Order online
-                </a>
-                <a
-                  href={site.phoneHref}
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
-                >
-                  Book a table
-                </a>
-              </div>
-            </Reveal>
-
-            <Reveal delay={240}>
-              <figure className="overflow-hidden">
-                <img
-                  src={shopfront.url}
-                  alt="Éclat Café shopfront on Union Road, Ascot Vale, with a Melbourne tram passing by"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
-                  loading="eager"
-                />
-                <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
-                  234 Union Rd — corner windows open to the street.
-                </figcaption>
-              </figure>
-            </Reveal>
-          </div>
+          <Reveal delay={190}>
+            <h1 className="mx-auto mt-10 max-w-2xl font-display text-[1.6rem] leading-[1.3] sm:text-[2.1rem] sm:leading-[1.28]">
+              <Typewriter text="An all-day café on Union Road — espresso, house-made plates and an unhurried room." />
+            </h1>
+            <p className="mx-auto mt-7 max-w-xl text-base text-muted-foreground">
+              Breakfast from open, lunch through to close, and coffee in between. Sit street-side and
+              watch the tram roll past, or take it with you.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+              <Link
+                to="/menu"
+                className="border border-foreground px-7 py-3 text-[0.72rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
+              >
+                View menu
+              </Link>
+              <a
+                href={site.orderUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[0.72rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+              >
+                Order online
+              </a>
+              <a
+                href={site.phoneHref}
+                className="text-[0.72rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+              >
+                Book a table
+              </a>
+            </div>
+          </Reveal>
         </section>
+
+        <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8">
+          <Reveal delay={120} as="figure">
+            <div className="overflow-hidden">
+              <img
+                src={shopfront.url}
+                alt="Éclat Café shopfront on Union Road, Ascot Vale, with a Melbourne tram passing by"
+                className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03] sm:aspect-[16/9]"
+                loading="eager"
+              />
+            </div>
+            <figcaption className="mt-3 text-[0.78rem] text-muted-foreground">
+              234 Union Rd — corner windows open to the street.
+            </figcaption>
+          </Reveal>
+        </section>
+
 
         {/* Rating strip */}
         <section className="border-y border-border/70 bg-card">
