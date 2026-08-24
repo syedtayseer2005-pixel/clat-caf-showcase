@@ -31,7 +31,7 @@ function ReviewsPage() {
       <main className="mx-auto w-full max-w-5xl px-5 sm:px-8">
         <header className="pt-14 pb-12 sm:pt-20">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
               Guest feedback
             </p>
             <h1 className="mt-5 font-display text-3xl sm:text-4xl">Reviews</h1>
@@ -42,14 +42,14 @@ function ReviewsPage() {
                 <p className="font-display text-4xl leading-none tabular-nums">
                   {ratingSummary.score}
                 </p>
-                <p className="mt-2 text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
+                <p className="mt-2 text-[0.74rem] tracking-[0.2em] text-muted-foreground uppercase">
                   {ratingSummary.count} Google reviews
                 </p>
               </div>
               <dl className="flex flex-wrap gap-x-10 gap-y-4">
                 {ratingSummary.breakdown.map((b) => (
                   <div key={b.label}>
-                    <dt className="text-[0.62rem] tracking-[0.2em] text-muted-foreground uppercase">
+                    <dt className="text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
                       {b.label}
                     </dt>
                     <dd className="mt-1 font-display text-base">{b.value}</dd>
@@ -66,16 +66,16 @@ function ReviewsPage() {
               <blockquote className="max-w-2xl font-display text-lg leading-relaxed sm:text-xl">
                 “{review.quote}”
               </blockquote>
-              <p className="mt-5 text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
+              <p className="mt-5 text-[0.74rem] tracking-[0.2em] text-muted-foreground uppercase">
                 {review.author}
                 {review.meta ? ` · ${review.meta}` : ""} · {review.when}
               </p>
               {review.ownerReply && (
                 <div className="mt-6 max-w-2xl border-l border-border pl-5">
-                  <p className="text-[0.62rem] tracking-[0.2em] text-muted-foreground uppercase">
+                  <p className="text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
                     Reply from Éclat
                   </p>
-                  <p className="mt-2 text-[0.86rem] leading-relaxed text-muted-foreground">
+                  <p className="mt-2 text-[0.92rem] leading-relaxed text-muted-foreground">
                     {review.ownerReply}
                   </p>
                 </div>
@@ -90,13 +90,13 @@ function ReviewsPage() {
               href={site.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
+              className="border border-foreground px-6 py-3 text-[0.74rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
             >
               See all Google reviews
             </a>
             <Link
               to="/contact"
-              className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+              className="text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
             >
               Plan a visit
             </Link>

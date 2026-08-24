@@ -46,11 +46,11 @@ function DetailedSection({ section }: { section: MenuSection }) {
       {section.items.map((item, i) => (
         <Reveal as="li" key={item.name} delay={Math.min(i, 6) * 60}>
           <div className="flex items-baseline justify-between gap-4 border-b border-border/70 pb-1.5">
-            <h3 className="text-[0.95rem] leading-snug">{item.name}</h3>
+            <h3 className="text-[1.02rem] leading-snug">{item.name}</h3>
             <Price value={item.price} />
           </div>
           {item.description && (
-            <p className="mt-2 text-[0.83rem] leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-[0.9rem] leading-relaxed text-muted-foreground">
               {item.description}
             </p>
           )}
@@ -64,7 +64,7 @@ function CompactSection({ section }: { section: MenuSection }) {
   return (
     <>
       {section.note && (
-        <p className="mt-4 max-w-xl text-[0.83rem] leading-relaxed text-muted-foreground">
+        <p className="mt-4 max-w-xl text-[0.9rem] leading-relaxed text-muted-foreground">
           {section.note}
         </p>
       )}
@@ -72,7 +72,7 @@ function CompactSection({ section }: { section: MenuSection }) {
         {section.items.map((item, i) => (
           <Reveal as="li" key={item.name} delay={Math.min(i, 6) * 45}>
             <div className="flex items-baseline gap-3">
-              <span className="text-[0.9rem]">{item.name}</span>
+              <span className="text-[0.97rem]">{item.name}</span>
               <span
                 aria-hidden
                 className="mb-1 grow border-b border-dotted border-border"
@@ -94,7 +94,7 @@ function MenuPage() {
       <main className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="pt-14 pb-10 sm:pt-20">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
               Éclat Café · Ascot Vale
             </p>
             <h1 className="mt-5 font-display text-3xl sm:text-4xl">Menu</h1>
@@ -109,7 +109,7 @@ function MenuPage() {
                 <a
                   key={s.id}
                   href={`#${s.id}`}
-                  className="text-[0.66rem] tracking-[0.18em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
+                  className="text-[0.7rem] tracking-[0.18em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
                 >
                   {s.title}
                 </a>
@@ -127,7 +127,7 @@ function MenuPage() {
                   <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                     <h2 className="font-display text-xl sm:text-2xl">{section.title}</h2>
                     {section.kicker && (
-                      <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+                      <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                         {section.kicker}
                       </p>
                     )}

@@ -31,7 +31,7 @@ function ContactPage() {
       <main className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="pt-14 pb-12 sm:pt-20">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
               Union Road · Ascot Vale
             </p>
             <h1 className="mt-5 font-display text-3xl sm:text-4xl">Contact</h1>
@@ -45,7 +45,7 @@ function ContactPage() {
         <div className="grid gap-12 border-t border-border pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
           <div className="space-y-10">
             <Reveal>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 Address
               </h2>
               <address className="mt-4 space-y-0.5 text-base not-italic">
@@ -56,7 +56,7 @@ function ContactPage() {
             </Reveal>
 
             <Reveal delay={70}>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 Phone
               </h2>
               <a
@@ -68,7 +68,7 @@ function ContactPage() {
             </Reveal>
 
             <Reveal delay={140}>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 Opening hours
               </h2>
               <dl className="mt-4 max-w-sm space-y-1.5 text-sm">
@@ -82,19 +82,19 @@ function ContactPage() {
                   </div>
                 ))}
               </dl>
-              <p className="mt-4 max-w-sm text-[0.68rem] text-muted-foreground">
+              <p className="mt-4 max-w-sm text-[0.74rem] text-muted-foreground">
                 {site.hoursNote}
               </p>
             </Reveal>
 
             <Reveal delay={210}>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 Reservations & orders
               </h2>
               <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <a
                   href={site.phoneHref}
-                  className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
+                  className="border border-foreground px-6 py-3 text-[0.74rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
                 >
                   Call to book
                 </a>
@@ -102,7 +102,7 @@ function ContactPage() {
                   href={site.orderUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+                  className="text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                 >
                   Order online
                 </a>
@@ -110,7 +110,7 @@ function ContactPage() {
                   href={site.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+                  className="text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                 >
                   Instagram
                 </a>
@@ -133,7 +133,7 @@ function ContactPage() {
                 href={site.directionsUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-block text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+                className="mt-4 inline-block text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
               >
                 Get directions
               </a>
@@ -148,7 +148,7 @@ function ContactPage() {
                   className="aspect-[16/10] w-full object-cover"
                 />
               </div>
-              <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
+              <figcaption className="mt-2.5 text-[0.74rem] text-muted-foreground">
                 Look for the ÉCLAT signage — tram stop and street parking on Union Road.
               </figcaption>
             </Reveal>
