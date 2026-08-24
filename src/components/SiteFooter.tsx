@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { site } from "@/data/site";
-import logo from "@/assets/eclat-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -8,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
         <div>
           <Link to="/" aria-label="Éclat Café — home">
-            <img src={logo.url} alt="Éclat Café" className="h-4 w-auto" />
+            <img src="/images/eclat-logo.png" alt="Éclat Café" className="h-4 w-auto" />
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             All-day café on Union Road, Ascot Vale. Espresso, house-made plates and a light-filled
@@ -23,7 +22,7 @@ export function SiteFooter() {
               <div key={line}>{line}</div>
             ))}
           </address>
-          <a
+          
             href={site.phoneHref}
             className="mt-3 inline-block text-sm transition-colors duration-300 hover:text-accent"
           >
@@ -41,7 +40,7 @@ export function SiteFooter() {
               </div>
             ))}
           </dl>
-          <a
+          
             href={site.instagram}
             target="_blank"
             rel="noreferrer"
