@@ -4,6 +4,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { ratingSummary, reviews } from "@/data/reviews";
 import { site } from "@/data/site";
+import mural from "@/assets/eclat-mural.jpg.asset.json";
+
 
 const title = "Reviews — Éclat Café, Ascot Vale";
 const description =
