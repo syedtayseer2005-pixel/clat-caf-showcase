@@ -128,7 +128,7 @@ function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              
+              <a
                 href={site.directionsUrl}
                 target="_blank"
                 rel="noreferrer"
