@@ -58,7 +58,7 @@ function ContactPage() {
               <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
                 Phone
               </h2>
-              
+              <a
                 href={site.phoneHref}
                 className="mt-4 inline-block text-base transition-colors duration-300 hover:text-accent"
               >
@@ -91,13 +91,13 @@ function ContactPage() {
                 Reservations & orders
               </h2>
               <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-                
+                <a
                   href={site.phoneHref}
                   className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
                 >
                   Call to book
                 </a>
-                
+                <a
                   href={site.orderUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -105,7 +105,7 @@ function ContactPage() {
                 >
                   Order online
                 </a>
-                
+                <a
                   href={site.instagram}
                   target="_blank"
                   rel="noreferrer"
