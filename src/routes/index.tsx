@@ -36,10 +36,10 @@ function Home() {
             </p>
           </Reveal>
           <Reveal delay={90}>
-            <img
+                        <img
               src="/images/eclat-logo.png"
               alt="Éclat Café"
-              className="mt-6 h-8 w-auto sm:h-12 lg:h-14"
+              className="mt-6 h-12 w-auto sm:h-20 lg:h-24"
             />
           </Reveal>
           <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
