@@ -39,7 +39,7 @@ function Home() {
                         <img
               src="/images/eclat-logo.png"
               alt="Éclat Café"
-              className="mt-6 h-12 w-auto sm:h-20 lg:h-24"
+              className="mt-8 h-16 w-auto sm:h-24 lg:h-28"
             />
           </Reveal>
           <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
