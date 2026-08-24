@@ -29,7 +29,7 @@ function Home() {
       <SiteHeader />
 
       <main>
-                <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden">
           <div className="absolute inset-0">
             <img
               src="/images/eclat-hero-bg.jpg"
@@ -120,18 +120,7 @@ function Home() {
           </div>
         </section>
 
-                <section className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img
-              src="/images/eclat-hero-bg.jpg"
-              alt=""
-              aria-hidden="true"
-              className="h-full w-full object-cover opacity-40 blur-sm"
-            />
-            <div className="absolute inset-0 bg-background/70" />
-          </div>
-
-          <div className="relative mx-auto w-full max-w-6xl px-5 pt-14 pb-16 sm:px-8 sm:pt-20">
+        <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
           <Reveal>
             <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
               Inside Éclat
@@ -264,7 +253,7 @@ function Home() {
           <div className="mx-auto w-full max-w-3xl px-5 py-20 text-center sm:px-8">
             <Reveal>
               <blockquote className="font-display text-lg leading-relaxed text-balance sm:text-xl">
-                “{reviews[0]?.quote}”
+                "{reviews[0]?.quote}"
               </blockquote>
               <p className="mt-5 text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
                 {reviews[0]?.author} · Google
