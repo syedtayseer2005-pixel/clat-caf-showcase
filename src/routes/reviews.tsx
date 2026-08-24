@@ -100,7 +100,7 @@ function ReviewsPage() {
 
         <Reveal>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border/70 py-12">
-            
+            <a
               href={site.mapsUrl}
               target="_blank"
               rel="noreferrer"
