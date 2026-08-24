@@ -3,7 +3,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/data/site";
-import shopfront from "@/assets/eclat-shopfront.jpg.asset.json";
 
 const title = "Contact & Hours — Éclat Café, Ascot Vale";
 const description =
@@ -59,7 +58,7 @@ function ContactPage() {
               <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
                 Phone
               </h2>
-              <a
+              
                 href={site.phoneHref}
                 className="mt-4 inline-block text-base transition-colors duration-300 hover:text-accent"
               >
@@ -92,13 +91,13 @@ function ContactPage() {
                 Reservations & orders
               </h2>
               <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <a
+                
                   href={site.phoneHref}
                   className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
                 >
                   Call to book
                 </a>
-                <a
+                
                   href={site.orderUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -106,7 +105,7 @@ function ContactPage() {
                 >
                   Order online
                 </a>
-                <a
+                
                   href={site.instagram}
                   target="_blank"
                   rel="noreferrer"
@@ -129,7 +128,7 @@ function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              <a
+              
                 href={site.directionsUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -142,14 +141,14 @@ function ContactPage() {
             <Reveal delay={160} as="figure">
               <div className="overflow-hidden">
                 <img
-                  src={shopfront.url}
-                  alt="Éclat Café shopfront on Union Road, Ascot Vale, with a tram passing"
+                  src="/images/eclat-thankyou.png"
+                  alt="A drink from Éclat Café with a handwritten 'thank you' note"
                   loading="lazy"
                   className="aspect-[16/10] w-full object-cover"
                 />
               </div>
               <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
-                Look for the ÉCLAT signage — tram stop and street parking on Union Road.
+                Thanks for stopping by — we'll see you on Union Road.
               </figcaption>
             </Reveal>
           </div>
