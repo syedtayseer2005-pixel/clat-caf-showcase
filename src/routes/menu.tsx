@@ -6,6 +6,9 @@ import { menu, type MenuSection } from "@/data/menu";
 import { site } from "@/data/site";
 import coffee from "@/assets/eclat-coffee.jpg.asset.json";
 import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
+import breakfast from "@/assets/eclat-breakfast.jpg.asset.json";
+import pasta from "@/assets/eclat-pasta.jpg.asset.json";
+
 
 const title = "Menu — Éclat Café, Ascot Vale";
 const description =
