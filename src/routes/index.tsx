@@ -77,7 +77,7 @@ function Home() {
                   >
                     Order online
                   </a>
-                  
+                  <a
                     href={site.phoneHref}
                     className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                   >
