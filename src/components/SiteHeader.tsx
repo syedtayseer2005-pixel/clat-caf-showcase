@@ -1,8 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/eclat-logo.png.asset.json";
-import monogram from "@/assets/eclat-monogram.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -29,9 +27,9 @@ export function SiteHeader() {
           className="flex shrink-0 items-center gap-2.5 transition-opacity duration-300 hover:opacity-70"
         >
           <img
-            src={isHome ? logo.url : monogram.url}
+            src="/images/eclat-logo.png"
             alt="Éclat Café logo"
-            className={isHome ? "h-4 w-auto sm:h-5" : "h-5 w-auto sm:h-6"}
+            className="h-6 w-auto sm:h-7"
           />
           {!isHome && (
             <span className="hidden text-[0.62rem] tracking-brand text-muted-foreground uppercase sm:inline">
