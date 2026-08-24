@@ -29,15 +29,31 @@ export const Route = createFileRoute("/menu")({
 });
 
 const sectionImages: Record<string, { url: string; alt: string }> = {
-  coffee: {
-    url: coffee.url,
-    alt: "Two lattes with poured art on black saucers at Éclat Café",
+// Only genres we hold genuine, matching photography for. Categories without a
+// real source photo intentionally stay text-only rather than borrow an image.
+const sectionImages: Record<string, { url: string; alt: string; ratio: string }> = {
+  "all-day": {
+    url: breakfast.url,
+    alt: "Open omelette with mushrooms, tomato and rocket served with toasted sourdough at Éclat Café",
+    ratio: "aspect-[4/5]",
+  },
+  pastas: {
+    url: pasta.url,
+    alt: "Spaghetti in tomato sauce with chicken, parmesan and garlic bread at Éclat Café",
+    ratio: "aspect-[4/3]",
   },
   smoothies: {
     url: smoothie.url,
     alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
+    ratio: "aspect-[4/5]",
+  },
+  coffee: {
+    url: coffee.url,
+    alt: "Two lattes with poured art on black saucers at Éclat Café",
+    ratio: "aspect-[4/5]",
   },
 };
+
 
 function Price({ value }: { value: string }) {
   return <span className="shrink-0 font-display text-sm tabular-nums">${value}</span>;
