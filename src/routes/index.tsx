@@ -88,8 +88,11 @@ function Home() {
                 </figcaption>
               </figure>
             </Reveal>
+            </div>
           </div>
         </section>
+
+        {/* Rating strip */}
 
         <section className="border-y border-border/70 bg-card">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
@@ -108,7 +111,18 @@ function Home() {
           </div>
         </section>
 
-        <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
+                <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/images/eclat-hero-bg.jpg"
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover opacity-40 blur-sm"
+            />
+            <div className="absolute inset-0 bg-background/70" />
+          </div>
+
+          <div className="relative mx-auto w-full max-w-6xl px-5 pt-14 pb-16 sm:px-8 sm:pt-20">
           <Reveal>
             <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
               Inside Éclat
