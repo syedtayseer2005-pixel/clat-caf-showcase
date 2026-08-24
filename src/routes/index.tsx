@@ -4,11 +4,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/data/site";
 import { ratingSummary, reviews } from "@/data/reviews";
-import logo from "@/assets/eclat-logo.png.asset.json";
-import shopfront from "@/assets/eclat-shopfront.jpg.asset.json";
-import interior from "@/assets/eclat-interior.jpg.asset.json";
-import coffee from "@/assets/eclat-coffee.jpg.asset.json";
-import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
 
 const title = "Éclat Café — All-day café on Union Road, Ascot Vale";
 const description =
@@ -34,7 +29,6 @@ function Home() {
       <SiteHeader />
 
       <main>
-        {/* Hero */}
         <section className="mx-auto w-full max-w-6xl px-5 pt-14 pb-16 sm:px-8 sm:pt-20">
           <Reveal>
             <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
@@ -43,11 +37,9 @@ function Home() {
           </Reveal>
           <Reveal delay={90}>
             <img
-              src={logo.url}
+              src="/images/eclat-logo.png"
               alt="Éclat Café"
               className="mt-6 h-8 w-auto sm:h-12 lg:h-14"
-              width={900}
-              height={221}
             />
           </Reveal>
           <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
@@ -66,7 +58,7 @@ function Home() {
                 >
                   View menu
                 </Link>
-                <a
+                
                   href={site.orderUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -74,7 +66,7 @@ function Home() {
                 >
                   Order online
                 </a>
-                <a
+                
                   href={site.phoneHref}
                   className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                 >
@@ -86,7 +78,7 @@ function Home() {
             <Reveal delay={240}>
               <figure className="overflow-hidden">
                 <img
-                  src={shopfront.url}
+                  src="/images/eclat-shopfront.png"
                   alt="Éclat Café shopfront on Union Road, Ascot Vale, with a Melbourne tram passing by"
                   className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
                   loading="eager"
@@ -99,7 +91,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Rating strip */}
         <section className="border-y border-border/70 bg-card">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p className="text-sm">
@@ -117,7 +108,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Gallery */}
         <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
           <Reveal>
             <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
@@ -127,19 +117,19 @@ function Home() {
           <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                src: interior.url,
-                alt: "Interior of Éclat Café with rattan pendant lights, timber tables and a full cake cabinet",
-                caption: "The room — rattan light, timber, a full cabinet.",
+                src: "/images/eclat-interior.png",
+                alt: "A guest's breakfast bowl by the window at Éclat Café",
+                caption: "Breakfast, window-side.",
               },
               {
-                src: coffee.url,
-                alt: "Two cups of latte art coffee served on black saucers at Éclat Café",
-                caption: "Espresso, poured properly.",
+                src: "/images/eclat-coffee.png",
+                alt: "Fries, toast and a burger from Éclat's all-day menu",
+                caption: "House-made plates, shared.",
               },
               {
-                src: smoothie.url,
-                alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
-                caption: "Smoothies blended to order.",
+                src: "/images/eclat-laptop.png",
+                alt: "A guest working on a laptop at a table inside Éclat Café",
+                caption: "Room to sit, work and stay a while.",
               },
             ].map((img, i) => (
               <Reveal key={img.src} delay={i * 110} as="figure">
@@ -160,7 +150,7 @@ function Home() {
           <Reveal delay={120}>
             <p className="mt-6 text-[0.68rem] text-muted-foreground">
               Photography from our own{" "}
-              <a
+              
                 href={site.instagram}
                 target="_blank"
                 rel="noreferrer"
@@ -173,7 +163,6 @@ function Home() {
           </Reveal>
         </section>
 
-        {/* Service options */}
         <section className="border-t border-border/70 bg-card">
           <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
             <Reveal>
@@ -194,7 +183,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Location + hours */}
         <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <Reveal>
@@ -218,7 +206,7 @@ function Home() {
                 {site.hoursNote}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <a
+                
                   href={site.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -249,7 +237,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Review teaser */}
         <section className="border-t border-border/70">
           <div className="mx-auto w-full max-w-3xl px-5 py-20 text-center sm:px-8">
             <Reveal>
