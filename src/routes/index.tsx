@@ -120,59 +120,44 @@ function Home() {
 
         {/* Gallery */}
         <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <Reveal>
-            <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
-              Inside Éclat
-            </h2>
-          </Reveal>
-          <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                src: interior.url,
-                alt: "Interior of Éclat Café with rattan pendant lights, timber tables and a full cake cabinet",
-                caption: "The room — rattan light, timber, a full cabinet.",
-              },
-              {
-                src: coffee.url,
-                alt: "Two cups of latte art coffee served on black saucers at Éclat Café",
-                caption: "Espresso, poured properly.",
-              },
-              {
-                src: smoothie.url,
-                alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
-                caption: "Smoothies blended to order.",
-              },
-            ].map((img, i) => (
-              <Reveal key={img.src} delay={i * 110} as="figure">
-                <div className="overflow-hidden">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04]"
-                  />
-                </div>
-                <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
-                  {img.caption}
-                </figcaption>
-              </Reveal>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+            <Reveal as="figure">
+              <div className="overflow-hidden">
+                <img
+                  src={interior.url}
+                  alt="Interior of Éclat Café with rattan pendant lights, timber tables and a full cake cabinet"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04]"
+                />
+              </div>
+              <figcaption className="mt-3 text-[0.78rem] text-muted-foreground">
+                The room — rattan light, timber and a full cabinet.
+              </figcaption>
+            </Reveal>
+            <Reveal delay={130}>
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
+                Inside Éclat
+              </h2>
+              <p className="mt-6 font-display text-xl leading-relaxed sm:text-2xl">
+                A light-filled room off Union Road, built for slow breakfasts and quick coffees
+                alike.
+              </p>
+              <p className="mt-5 text-base text-muted-foreground">
+                Every photograph on this site is our own, taken in the café and shared on our{" "}
+                <a
+                  href={site.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-border underline-offset-[5px] hover:text-accent"
+                >
+                  Instagram
+                </a>
+                .
+              </p>
+            </Reveal>
           </div>
-          <Reveal delay={120}>
-            <p className="mt-6 text-[0.68rem] text-muted-foreground">
-              Photography from our own{" "}
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="underline decoration-border underline-offset-[5px] hover:text-accent"
-              >
-                Instagram
-              </a>
-              .
-            </p>
-          </Reveal>
         </section>
+
 
         {/* Service options */}
         <section className="border-t border-border/70 bg-card">
