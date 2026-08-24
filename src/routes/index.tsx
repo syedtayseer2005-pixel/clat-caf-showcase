@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
+import { Typewriter } from "@/components/Typewriter";
 import { site } from "@/data/site";
 import { ratingSummary, reviews } from "@/data/reviews";
 import logo from "@/assets/eclat-logo.png.asset.json";
 import shopfront from "@/assets/eclat-shopfront.jpg.asset.json";
 import interior from "@/assets/eclat-interior.jpg.asset.json";
-import coffee from "@/assets/eclat-coffee.jpg.asset.json";
-import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
+
 
 const title = "Éclat Café — All-day café on Union Road, Ascot Vale";
 const description =
