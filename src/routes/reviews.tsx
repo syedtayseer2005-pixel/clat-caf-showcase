@@ -60,6 +60,22 @@ function ReviewsPage() {
           </Reveal>
         </header>
 
+        <Reveal delay={60} as="figure" className="pb-14">
+          <div className="overflow-hidden">
+            <img
+              src={mural.url}
+              alt="Painted botanical mural and preserved-moss wall above the booth seating at Éclat Café"
+              loading="lazy"
+              className="aspect-[16/7] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
+            />
+          </div>
+          <figcaption className="mt-3 text-[0.74rem] text-muted-foreground">
+            The mural wall behind the booths — a favourite corner with regulars.
+          </figcaption>
+        </Reveal>
+
+
+
         <div className="divide-y divide-border/70">
           {reviews.map((review, i) => (
             <Reveal as="article" key={review.author} delay={i * 90} className="py-10">
