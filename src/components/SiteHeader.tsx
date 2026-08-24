@@ -25,7 +25,9 @@ export function SiteHeader() {
           to="/"
           aria-label={isHome ? "Éclat Café" : "Éclat Café — return to homepage"}
           className="flex shrink-0 items-center gap-2.5 transition-opacity duration-300 hover:opacity-70"
-                  <img
+          </Link>
+        >
+          <img
             src="/images/eclat-logo.png"
             alt="Éclat Café logo"
             className="h-8 w-auto sm:h-10"
