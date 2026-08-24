@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
+import { Typewriter } from "@/components/Typewriter";
 import { site } from "@/data/site";
 import { ratingSummary, reviews } from "@/data/reviews";
 import logo from "@/assets/eclat-logo.png.asset.json";
 import shopfront from "@/assets/eclat-shopfront.jpg.asset.json";
 import interior from "@/assets/eclat-interior.jpg.asset.json";
-import coffee from "@/assets/eclat-coffee.jpg.asset.json";
-import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
+
 
 const title = "Éclat Café — All-day café on Union Road, Ascot Vale";
 const description =
@@ -35,9 +35,9 @@ function Home() {
 
       <main>
         {/* Hero */}
-        <section className="mx-auto w-full max-w-6xl px-5 pt-14 pb-16 sm:px-8 sm:pt-20">
+        <section className="mx-auto w-full max-w-5xl px-5 pt-16 pb-16 text-center sm:px-8 sm:pt-24">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.74rem] tracking-brand text-muted-foreground uppercase">
               Ascot Vale · Melbourne
             </p>
           </Reveal>
@@ -45,59 +45,60 @@ function Home() {
             <img
               src={logo.url}
               alt="Éclat Café"
-              className="mt-6 h-8 w-auto sm:h-12 lg:h-14"
+              className="mx-auto mt-8 h-10 w-auto sm:mt-10 sm:h-16 lg:h-20"
               width={900}
               height={221}
             />
           </Reveal>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
-            <Reveal delay={170}>
-              <h1 className="max-w-md text-2xl leading-[1.25] text-balance sm:text-3xl">
-                An all-day café on Union Road — espresso, house-made plates and an unhurried room.
-              </h1>
-              <p className="mt-5 max-w-md text-sm text-muted-foreground">
-                Breakfast from open, lunch through to close, and coffee in between. Sit street-side
-                and watch the tram roll past, or take it with you.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Link
-                  to="/menu"
-                  className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
-                >
-                  View menu
-                </Link>
-                <a
-                  href={site.orderUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
-                >
-                  Order online
-                </a>
-                <a
-                  href={site.phoneHref}
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
-                >
-                  Book a table
-                </a>
-              </div>
-            </Reveal>
-
-            <Reveal delay={240}>
-              <figure className="overflow-hidden">
-                <img
-                  src={shopfront.url}
-                  alt="Éclat Café shopfront on Union Road, Ascot Vale, with a Melbourne tram passing by"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
-                  loading="eager"
-                />
-                <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
-                  234 Union Rd — corner windows open to the street.
-                </figcaption>
-              </figure>
-            </Reveal>
-          </div>
+          <Reveal delay={190}>
+            <h1 className="mx-auto mt-10 max-w-2xl font-display text-[1.6rem] leading-[1.3] sm:text-[2.1rem] sm:leading-[1.28]">
+              <Typewriter text="An all-day café on Union Road — espresso, house-made plates and an unhurried room." />
+            </h1>
+            <p className="mx-auto mt-7 max-w-xl text-base text-muted-foreground">
+              Breakfast from open, lunch through to close, and coffee in between. Sit street-side and
+              watch the tram roll past, or take it with you.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+              <Link
+                to="/menu"
+                className="border border-foreground px-7 py-3 text-[0.76rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
+              >
+                View menu
+              </Link>
+              <a
+                href={site.orderUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[0.76rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+              >
+                Order online
+              </a>
+              <a
+                href={site.phoneHref}
+                className="text-[0.76rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+              >
+                Book a table
+              </a>
+            </div>
+          </Reveal>
         </section>
+
+        <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8">
+          <Reveal delay={120} as="figure">
+            <div className="overflow-hidden">
+              <img
+                src={shopfront.url}
+                alt="Éclat Café shopfront on Union Road, Ascot Vale, with a Melbourne tram passing by"
+                className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03] sm:aspect-[16/9]"
+                loading="eager"
+              />
+            </div>
+            <figcaption className="mt-3 text-[0.8rem] text-muted-foreground">
+              234 Union Rd — corner windows open to the street.
+            </figcaption>
+          </Reveal>
+        </section>
+
 
         {/* Rating strip */}
         <section className="border-y border-border/70 bg-card">
@@ -110,7 +111,7 @@ function Home() {
             </p>
             <Link
               to="/reviews"
-              className="self-start text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent sm:self-auto"
+              className="self-start text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent sm:self-auto"
             >
               Read reviews
             </Link>
@@ -119,65 +120,50 @@ function Home() {
 
         {/* Gallery */}
         <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <Reveal>
-            <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
-              Inside Éclat
-            </h2>
-          </Reveal>
-          <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                src: interior.url,
-                alt: "Interior of Éclat Café with rattan pendant lights, timber tables and a full cake cabinet",
-                caption: "The room — rattan light, timber, a full cabinet.",
-              },
-              {
-                src: coffee.url,
-                alt: "Two cups of latte art coffee served on black saucers at Éclat Café",
-                caption: "Espresso, poured properly.",
-              },
-              {
-                src: smoothie.url,
-                alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
-                caption: "Smoothies blended to order.",
-              },
-            ].map((img, i) => (
-              <Reveal key={img.src} delay={i * 110} as="figure">
-                <div className="overflow-hidden">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04]"
-                  />
-                </div>
-                <figcaption className="mt-2.5 text-[0.68rem] text-muted-foreground">
-                  {img.caption}
-                </figcaption>
-              </Reveal>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+            <Reveal as="figure">
+              <div className="overflow-hidden">
+                <img
+                  src={interior.url}
+                  alt="Interior of Éclat Café with rattan pendant lights, timber tables and a full cake cabinet"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04]"
+                />
+              </div>
+              <figcaption className="mt-3 text-[0.8rem] text-muted-foreground">
+                The room — rattan light, timber and a full cabinet.
+              </figcaption>
+            </Reveal>
+            <Reveal delay={130}>
+              <h2 className="text-[0.74rem] tracking-brand text-muted-foreground uppercase">
+                Inside Éclat
+              </h2>
+              <p className="mt-6 font-display text-xl leading-relaxed sm:text-2xl">
+                A light-filled room off Union Road, built for slow breakfasts and quick coffees
+                alike.
+              </p>
+              <p className="mt-5 text-base text-muted-foreground">
+                Every photograph on this site is our own, taken in the café and shared on our{" "}
+                <a
+                  href={site.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-border underline-offset-[5px] hover:text-accent"
+                >
+                  Instagram
+                </a>
+                .
+              </p>
+            </Reveal>
           </div>
-          <Reveal delay={120}>
-            <p className="mt-6 text-[0.68rem] text-muted-foreground">
-              Photography from our own{" "}
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="underline decoration-border underline-offset-[5px] hover:text-accent"
-              >
-                Instagram
-              </a>
-              .
-            </p>
-          </Reveal>
         </section>
+
 
         {/* Service options */}
         <section className="border-t border-border/70 bg-card">
           <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
             <Reveal>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 How to visit
               </h2>
             </Reveal>
@@ -198,7 +184,7 @@ function Home() {
         <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <Reveal>
-              <h2 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+              <h2 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                 Find us
               </h2>
               <p className="mt-6 font-display text-xl leading-snug">
@@ -214,7 +200,7 @@ function Home() {
                   </div>
                 ))}
               </dl>
-              <p className="mt-4 max-w-sm text-[0.68rem] text-muted-foreground">
+              <p className="mt-4 max-w-sm text-[0.74rem] text-muted-foreground">
                 {site.hoursNote}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -222,13 +208,13 @@ function Home() {
                   href={site.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="border border-foreground px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
+                  className="border border-foreground px-6 py-3 text-[0.74rem] tracking-[0.22em] uppercase transition-colors duration-300 hover:bg-foreground hover:text-primary-foreground"
                 >
                   Directions
                 </a>
                 <Link
                   to="/contact"
-                  className="text-[0.68rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
+                  className="text-[0.74rem] tracking-[0.22em] uppercase underline decoration-border decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-accent"
                 >
                   Contact & bookings
                 </Link>
@@ -256,7 +242,7 @@ function Home() {
               <blockquote className="font-display text-lg leading-relaxed text-balance sm:text-xl">
                 “{reviews[0]?.quote}”
               </blockquote>
-              <p className="mt-5 text-[0.68rem] tracking-[0.2em] text-muted-foreground uppercase">
+              <p className="mt-5 text-[0.74rem] tracking-[0.2em] text-muted-foreground uppercase">
                 {reviews[0]?.author} · Google
               </p>
             </Reveal>

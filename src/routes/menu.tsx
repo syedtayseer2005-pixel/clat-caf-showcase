@@ -6,6 +6,9 @@ import { menu, type MenuSection } from "@/data/menu";
 import { site } from "@/data/site";
 import coffee from "@/assets/eclat-coffee.jpg.asset.json";
 import smoothie from "@/assets/eclat-smoothie.jpg.asset.json";
+import breakfast from "@/assets/eclat-breakfast.jpg.asset.json";
+import pasta from "@/assets/eclat-pasta.jpg.asset.json";
+
 
 const title = "Menu — Éclat Café, Ascot Vale";
 const description =
@@ -25,16 +28,32 @@ export const Route = createFileRoute("/menu")({
   component: MenuPage,
 });
 
-const sectionImages: Record<string, { url: string; alt: string }> = {
-  coffee: {
-    url: coffee.url,
-    alt: "Two lattes with poured art on black saucers at Éclat Café",
+
+// Only genres we hold genuine, matching photography for. Categories without a
+// real source photo intentionally stay text-only rather than borrow an image.
+const sectionImages: Record<string, { url: string; alt: string; ratio: string }> = {
+  "all-day": {
+    url: breakfast.url,
+    alt: "Open omelette with mushrooms, tomato and rocket served with toasted sourdough at Éclat Café",
+    ratio: "aspect-[4/5]",
+  },
+  pastas: {
+    url: pasta.url,
+    alt: "Spaghetti in tomato sauce with chicken, parmesan and garlic bread at Éclat Café",
+    ratio: "aspect-[4/3]",
   },
   smoothies: {
     url: smoothie.url,
     alt: "Mango smoothie in a glass with a striped straw at Éclat Café",
+    ratio: "aspect-[4/5]",
+  },
+  coffee: {
+    url: coffee.url,
+    alt: "Two lattes with poured art on black saucers at Éclat Café",
+    ratio: "aspect-[4/5]",
   },
 };
+
 
 function Price({ value }: { value: string }) {
   return <span className="shrink-0 font-display text-sm tabular-nums">${value}</span>;
@@ -46,11 +65,11 @@ function DetailedSection({ section }: { section: MenuSection }) {
       {section.items.map((item, i) => (
         <Reveal as="li" key={item.name} delay={Math.min(i, 6) * 60}>
           <div className="flex items-baseline justify-between gap-4 border-b border-border/70 pb-1.5">
-            <h3 className="text-[0.95rem] leading-snug">{item.name}</h3>
+            <h3 className="text-[1.02rem] leading-snug">{item.name}</h3>
             <Price value={item.price} />
           </div>
           {item.description && (
-            <p className="mt-2 text-[0.83rem] leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-[0.9rem] leading-relaxed text-muted-foreground">
               {item.description}
             </p>
           )}
@@ -64,7 +83,7 @@ function CompactSection({ section }: { section: MenuSection }) {
   return (
     <>
       {section.note && (
-        <p className="mt-4 max-w-xl text-[0.83rem] leading-relaxed text-muted-foreground">
+        <p className="mt-4 max-w-xl text-[0.9rem] leading-relaxed text-muted-foreground">
           {section.note}
         </p>
       )}
@@ -72,7 +91,7 @@ function CompactSection({ section }: { section: MenuSection }) {
         {section.items.map((item, i) => (
           <Reveal as="li" key={item.name} delay={Math.min(i, 6) * 45}>
             <div className="flex items-baseline gap-3">
-              <span className="text-[0.9rem]">{item.name}</span>
+              <span className="text-[0.97rem]">{item.name}</span>
               <span
                 aria-hidden
                 className="mb-1 grow border-b border-dotted border-border"
@@ -94,7 +113,7 @@ function MenuPage() {
       <main className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="pt-14 pb-10 sm:pt-20">
           <Reveal>
-            <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+            <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
               Éclat Café · Ascot Vale
             </p>
             <h1 className="mt-5 font-display text-3xl sm:text-4xl">Menu</h1>
@@ -109,7 +128,7 @@ function MenuPage() {
                 <a
                   key={s.id}
                   href={`#${s.id}`}
-                  className="text-[0.66rem] tracking-[0.18em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
+                  className="text-[0.7rem] tracking-[0.18em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
                 >
                   {s.title}
                 </a>
@@ -127,7 +146,7 @@ function MenuPage() {
                   <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                     <h2 className="font-display text-xl sm:text-2xl">{section.title}</h2>
                     {section.kicker && (
-                      <p className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">
+                      <p className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">
                         {section.kicker}
                       </p>
                     )}
@@ -149,10 +168,14 @@ function MenuPage() {
                           src={image.url}
                           alt={image.alt}
                           loading="lazy"
-                          className="aspect-[4/5] w-full object-cover"
+                          className={`w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.04] ${image.ratio}`}
                         />
                       </div>
+                      <figcaption className="mt-3 text-[0.74rem] text-muted-foreground">
+                        {section.title} at Éclat — our own photograph.
+                      </figcaption>
                     </Reveal>
+
                   </div>
                 ) : section.layout === "detailed" ? (
                   <DetailedSection section={section} />
