@@ -153,8 +153,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
-    font-size: 16.5px;
-    line-height: 1.68;
+    font-size: 15px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -199,43 +199,11 @@
   animation: eclat-rise 0.85s cubic-bezier(0.22, 0.68, 0.24, 1) both;
 }
 
-@keyframes eclat-caret {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-
-.typewriter-caret {
-  display: inline-block;
-  width: 1px;
-  height: 1em;
-  margin-left: 0.09em;
-  vertical-align: -0.12em;
-  background-color: currentColor;
-  animation: eclat-caret 1.05s steps(1, end) infinite;
-}
-
-@media (min-width: 640px) {
-  body {
-    font-size: 17.5px;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-in {
     opacity: 1;
     animation: none;
-  }
-
-  .typewriter-caret {
-    animation: none;
-    opacity: 0;
   }
 }
 

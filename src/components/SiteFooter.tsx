@@ -17,7 +17,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">Visit</h3>
+          <h3 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">Visit</h3>
           <address className="mt-4 space-y-0.5 text-sm not-italic">
             {site.addressLines.map((line) => (
               <div key={line}>{line}</div>
@@ -32,7 +32,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="text-[0.68rem] tracking-brand text-muted-foreground uppercase">Hours</h3>
+          <h3 className="text-[0.62rem] tracking-brand text-muted-foreground uppercase">Hours</h3>
           <dl className="mt-4 space-y-1.5 text-sm">
             {site.hours.map((h) => (
               <div key={h.days} className="flex flex-wrap justify-between gap-x-6">
@@ -45,7 +45,7 @@ export function SiteFooter() {
             href={site.instagram}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 inline-block text-[0.74rem] tracking-[0.2em] uppercase transition-colors duration-300 hover:text-accent"
+            className="mt-4 inline-block text-[0.68rem] tracking-[0.2em] uppercase transition-colors duration-300 hover:text-accent"
           >
             Instagram
           </a>
@@ -53,7 +53,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border/60">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-5 text-[0.74rem] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-5 text-[0.68rem] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>© {new Date().getFullYear()} Éclat Café, Ascot Vale.</span>
           <span>{site.address}</span>
         </div>

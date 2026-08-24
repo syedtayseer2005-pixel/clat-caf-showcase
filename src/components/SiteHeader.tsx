@@ -34,7 +34,7 @@ export function SiteHeader() {
             className={isHome ? "h-4 w-auto sm:h-5" : "h-5 w-auto sm:h-6"}
           />
           {!isHome && (
-            <span className="hidden text-[0.68rem] tracking-brand text-muted-foreground uppercase sm:inline">
+            <span className="hidden text-[0.62rem] tracking-brand text-muted-foreground uppercase sm:inline">
               Ascot Vale
             </span>
           )}
@@ -45,7 +45,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="text-[0.75rem] tracking-[0.22em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
+              className="text-[0.7rem] tracking-[0.22em] text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -88,7 +88,7 @@ export function SiteHeader() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="block border-b border-border/50 py-3 text-[0.76rem] tracking-[0.22em] text-muted-foreground uppercase last:border-b-0"
+                  className="block border-b border-border/50 py-3 text-[0.72rem] tracking-[0.22em] text-muted-foreground uppercase last:border-b-0"
                   activeProps={{ className: "text-foreground" }}
                   activeOptions={{ exact: item.to === "/" }}
                 >
